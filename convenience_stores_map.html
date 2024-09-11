@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8ce721a303671c603bc4537a0f341da1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8ce721a303671c603bc4537a0f341da1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8ce721a303671c603bc4537a0f341da1 = L.map(
+                "map_8ce721a303671c603bc4537a0f341da1",
+                {
+                    center: [37.4895354, 126.9843168],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bc9239ce9dd1b100b2a06512597e2cfe = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_bc9239ce9dd1b100b2a06512597e2cfe.addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var marker_4f778d62f80ce188e088a7395e789057 = L.marker(
+                [37.4895354, 126.9843168],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_35636790ec7ffbea66c5009b87c0c690 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4f778d62f80ce188e088a7395e789057.setIcon(icon_35636790ec7ffbea66c5009b87c0c690);
+        
+    
+        var popup_0a591ee3121db5f11ae06ed5c52a8dda = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_0a9759e42936c0e1221cf723fc772db1 = $(`<div id="html_0a9759e42936c0e1221cf723fc772db1" style="width: 100.0%; height: 100.0%;">     <div style="white-space: nowrap; font-size: 12px; line-height: 0.5;">         현재 위치     </div>     </div>`)[0];
+                popup_0a591ee3121db5f11ae06ed5c52a8dda.setContent(html_0a9759e42936c0e1221cf723fc772db1);
+            
+        
+
+        marker_4f778d62f80ce188e088a7395e789057.bindPopup(popup_0a591ee3121db5f11ae06ed5c52a8dda)
+        .openPopup();
+
+        
+    
+    
+            var marker_61f6236be5068e40a3ca1713b1977d80 = L.marker(
+                [37.4918774, 126.9842488],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_f05bb94c6f293748633920ded27d3ecd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_61f6236be5068e40a3ca1713b1977d80.setIcon(icon_f05bb94c6f293748633920ded27d3ecd);
+        
+    
+        var popup_c331f284b59674ce53a59cf4542eb441 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_f33f7ac1e62047a1040590488d1e6c4e = $(`<div id="html_f33f7ac1e62047a1040590488d1e6c4e" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 방배홈타운점</b>         </div>         </div>`)[0];
+                popup_c331f284b59674ce53a59cf4542eb441.setContent(html_f33f7ac1e62047a1040590488d1e6c4e);
+            
+        
+
+        marker_61f6236be5068e40a3ca1713b1977d80.bindPopup(popup_c331f284b59674ce53a59cf4542eb441)
+        .openPopup();
+
+        
+    
+    
+        var popup_7b3a542330ef416f7f4708721531df15 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d41524dcf1a12ebd1574166822cca56b = $(`<div id="html_d41524dcf1a12ebd1574166822cca56b" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 방배홈타운점</b><br>             21 Donggwang-ro 3-gil, Seocho District         </div>         </div>`)[0];
+                popup_7b3a542330ef416f7f4708721531df15.setContent(html_d41524dcf1a12ebd1574166822cca56b);
+            
+        
+
+        marker_61f6236be5068e40a3ca1713b1977d80.bindPopup(popup_7b3a542330ef416f7f4708721531df15)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_61f6236be5068e40a3ca1713b1977d80);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_61f6236be5068e40a3ca1713b1977d80.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 방배홈타운점</b><br>
+            21 Donggwang-ro 3-gil, Seocho District
+        </div>
+        `);
+                    };
+                marker_61f6236be5068e40a3ca1713b1977d80.on('click', newMarker);
+            
+    
+            var marker_c0702feeb92c3a16bdf2f921c9309ffb = L.marker(
+                [37.4892389, 126.9874708],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_2f4d93a44179b17ed2c5fea16836b133 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c0702feeb92c3a16bdf2f921c9309ffb.setIcon(icon_2f4d93a44179b17ed2c5fea16836b133);
+        
+    
+        var popup_a9f35f98b724075ec4b6b901a6fee069 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_ab73143a5c0d814855cc40feaa10a5e2 = $(`<div id="html_ab73143a5c0d814855cc40feaa10a5e2" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 방배고려점</b>         </div>         </div>`)[0];
+                popup_a9f35f98b724075ec4b6b901a6fee069.setContent(html_ab73143a5c0d814855cc40feaa10a5e2);
+            
+        
+
+        marker_c0702feeb92c3a16bdf2f921c9309ffb.bindPopup(popup_a9f35f98b724075ec4b6b901a6fee069)
+        .openPopup();
+
+        
+    
+    
+        var popup_433646825c5bf199ae8c76e56082ae49 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6bfe4b06750ead69ac2609c377573842 = $(`<div id="html_6bfe4b06750ead69ac2609c377573842" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 방배고려점</b><br>             830-3 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_433646825c5bf199ae8c76e56082ae49.setContent(html_6bfe4b06750ead69ac2609c377573842);
+            
+        
+
+        marker_c0702feeb92c3a16bdf2f921c9309ffb.bindPopup(popup_433646825c5bf199ae8c76e56082ae49)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_c0702feeb92c3a16bdf2f921c9309ffb);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_c0702feeb92c3a16bdf2f921c9309ffb.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 방배고려점</b><br>
+            830-3 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_c0702feeb92c3a16bdf2f921c9309ffb.on('click', newMarker);
+            
+    
+            var marker_e759064e0377cb3b077df147f05f12fb = L.marker(
+                [37.4854732, 126.9849835],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_fde76169662b30bd7acc834cd6f9b01b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e759064e0377cb3b077df147f05f12fb.setIcon(icon_fde76169662b30bd7acc834cd6f9b01b);
+        
+    
+        var popup_4d40ef0cb93a665c0d2689a90252318a = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_f6e23d36eed7d4df6df226a6cebd13c4 = $(`<div id="html_f6e23d36eed7d4df6df226a6cebd13c4" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 이수역점</b>         </div>         </div>`)[0];
+                popup_4d40ef0cb93a665c0d2689a90252318a.setContent(html_f6e23d36eed7d4df6df226a6cebd13c4);
+            
+        
+
+        marker_e759064e0377cb3b077df147f05f12fb.bindPopup(popup_4d40ef0cb93a665c0d2689a90252318a)
+        .openPopup();
+
+        
+    
+    
+        var popup_acbf87c4b4db82e543cf5aa7f64ca62b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd01f3ff26b65af3c204e7846b866b62 = $(`<div id="html_bd01f3ff26b65af3c204e7846b866b62" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 이수역점</b><br>             951-1 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_acbf87c4b4db82e543cf5aa7f64ca62b.setContent(html_bd01f3ff26b65af3c204e7846b866b62);
+            
+        
+
+        marker_e759064e0377cb3b077df147f05f12fb.bindPopup(popup_acbf87c4b4db82e543cf5aa7f64ca62b)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_e759064e0377cb3b077df147f05f12fb);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_e759064e0377cb3b077df147f05f12fb.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 이수역점</b><br>
+            951-1 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_e759064e0377cb3b077df147f05f12fb.on('click', newMarker);
+            
+    
+            var marker_086221490217c9c6854804ce7c32f94b = L.marker(
+                [37.48926670000001, 126.9922759],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_b0afbf85de0c48e6b535a61328c0ebd6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_086221490217c9c6854804ce7c32f94b.setIcon(icon_b0afbf85de0c48e6b535a61328c0ebd6);
+        
+    
+        var popup_d9369bc67a41e8669f52a789b009e4b0 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_a77e3da5c585cf0b70aba6722fe56ebc = $(`<div id="html_a77e3da5c585cf0b70aba6722fe56ebc" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>세븐일레븐 방배가야점</b>         </div>         </div>`)[0];
+                popup_d9369bc67a41e8669f52a789b009e4b0.setContent(html_a77e3da5c585cf0b70aba6722fe56ebc);
+            
+        
+
+        marker_086221490217c9c6854804ce7c32f94b.bindPopup(popup_d9369bc67a41e8669f52a789b009e4b0)
+        .openPopup();
+
+        
+    
+    
+        var popup_e824c448c68d6b1b494c68d22d5ea6cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_291fc5e5582c19224fc3b82a91605f9f = $(`<div id="html_291fc5e5582c19224fc3b82a91605f9f" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>세븐일레븐 방배가야점</b><br>             852-20 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_e824c448c68d6b1b494c68d22d5ea6cc.setContent(html_291fc5e5582c19224fc3b82a91605f9f);
+            
+        
+
+        marker_086221490217c9c6854804ce7c32f94b.bindPopup(popup_e824c448c68d6b1b494c68d22d5ea6cc)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_086221490217c9c6854804ce7c32f94b);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_086221490217c9c6854804ce7c32f94b.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>세븐일레븐 방배가야점</b><br>
+            852-20 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_086221490217c9c6854804ce7c32f94b.on('click', newMarker);
+            
+    
+            var marker_4591657f9c7058043a969d0dd2abeaa8 = L.marker(
+                [37.48416529999999, 126.9795513],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_1f2a28af15e31a2b7486168319ddbb59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4591657f9c7058043a969d0dd2abeaa8.setIcon(icon_1f2a28af15e31a2b7486168319ddbb59);
+        
+    
+        var popup_173e135e08df5fdaa7716ba50452d144 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_7c93f1f9347780d2aed4bfaa5ccb8986 = $(`<div id="html_7c93f1f9347780d2aed4bfaa5ccb8986" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 신이수자이점</b>         </div>         </div>`)[0];
+                popup_173e135e08df5fdaa7716ba50452d144.setContent(html_7c93f1f9347780d2aed4bfaa5ccb8986);
+            
+        
+
+        marker_4591657f9c7058043a969d0dd2abeaa8.bindPopup(popup_173e135e08df5fdaa7716ba50452d144)
+        .openPopup();
+
+        
+    
+    
+        var popup_99d24f1025df6405462ba7d34df1886d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_967f4b30af6a78837a96554dea8df7c2 = $(`<div id="html_967f4b30af6a78837a96554dea8df7c2" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 신이수자이점</b><br>             1003-40 Sadang-dong, Dongjak District         </div>         </div>`)[0];
+                popup_99d24f1025df6405462ba7d34df1886d.setContent(html_967f4b30af6a78837a96554dea8df7c2);
+            
+        
+
+        marker_4591657f9c7058043a969d0dd2abeaa8.bindPopup(popup_99d24f1025df6405462ba7d34df1886d)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_4591657f9c7058043a969d0dd2abeaa8);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_4591657f9c7058043a969d0dd2abeaa8.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 신이수자이점</b><br>
+            1003-40 Sadang-dong, Dongjak District
+        </div>
+        `);
+                    };
+                marker_4591657f9c7058043a969d0dd2abeaa8.on('click', newMarker);
+            
+    
+            var marker_3d604bf32727daa3489d03dad644f6bc = L.marker(
+                [37.4878456, 126.9757135],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_3b3d4e0e29b0ed45cb32d0fc45430864 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3d604bf32727daa3489d03dad644f6bc.setIcon(icon_3b3d4e0e29b0ed45cb32d0fc45430864);
+        
+    
+        var popup_2d57bffb1015773f7f2c06f35b1d9e52 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_a848f11e3e0ef77c626515a2d47582d5 = $(`<div id="html_a848f11e3e0ef77c626515a2d47582d5" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 사당점</b>         </div>         </div>`)[0];
+                popup_2d57bffb1015773f7f2c06f35b1d9e52.setContent(html_a848f11e3e0ef77c626515a2d47582d5);
+            
+        
+
+        marker_3d604bf32727daa3489d03dad644f6bc.bindPopup(popup_2d57bffb1015773f7f2c06f35b1d9e52)
+        .openPopup();
+
+        
+    
+    
+        var popup_08298d67f9153c5925e6dc680ea62e38 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f2fd7b7f864ff8218395f3f69b16fea = $(`<div id="html_2f2fd7b7f864ff8218395f3f69b16fea" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 사당점</b><br>             1 층, 34 Sadang-ro 23na-gil, Dongjak District         </div>         </div>`)[0];
+                popup_08298d67f9153c5925e6dc680ea62e38.setContent(html_2f2fd7b7f864ff8218395f3f69b16fea);
+            
+        
+
+        marker_3d604bf32727daa3489d03dad644f6bc.bindPopup(popup_08298d67f9153c5925e6dc680ea62e38)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_3d604bf32727daa3489d03dad644f6bc);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_3d604bf32727daa3489d03dad644f6bc.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 사당점</b><br>
+            1 층, 34 Sadang-ro 23na-gil, Dongjak District
+        </div>
+        `);
+                    };
+                marker_3d604bf32727daa3489d03dad644f6bc.on('click', newMarker);
+            
+    
+            var marker_58226a023d19fef225bfecd62a064661 = L.marker(
+                [37.489239, 126.9940535],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_d5ad5a6a96c6d857f3407d455b842dda = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_58226a023d19fef225bfecd62a064661.setIcon(icon_d5ad5a6a96c6d857f3407d455b842dda);
+        
+    
+        var popup_505c239d4ffff4501645ed5410c576e3 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_2ecaa52a22b29035108fad992411d6c6 = $(`<div id="html_2ecaa52a22b29035108fad992411d6c6" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 방배캐슬점</b>         </div>         </div>`)[0];
+                popup_505c239d4ffff4501645ed5410c576e3.setContent(html_2ecaa52a22b29035108fad992411d6c6);
+            
+        
+
+        marker_58226a023d19fef225bfecd62a064661.bindPopup(popup_505c239d4ffff4501645ed5410c576e3)
+        .openPopup();
+
+        
+    
+    
+        var popup_c04a3ae6d3ccd18402198fbf8fe759af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_720159c21cca335ead7d5257b656642b = $(`<div id="html_720159c21cca335ead7d5257b656642b" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 방배캐슬점</b><br>             876-41 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_c04a3ae6d3ccd18402198fbf8fe759af.setContent(html_720159c21cca335ead7d5257b656642b);
+            
+        
+
+        marker_58226a023d19fef225bfecd62a064661.bindPopup(popup_c04a3ae6d3ccd18402198fbf8fe759af)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_58226a023d19fef225bfecd62a064661);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_58226a023d19fef225bfecd62a064661.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 방배캐슬점</b><br>
+            876-41 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_58226a023d19fef225bfecd62a064661.on('click', newMarker);
+            
+    
+            var marker_ac703904a95649d13195f87444fa5dd0 = L.marker(
+                [37.486156, 126.9934703],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_33782a4b78be5719e2620039d5b901e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ac703904a95649d13195f87444fa5dd0.setIcon(icon_33782a4b78be5719e2620039d5b901e2);
+        
+    
+        var popup_60451483845888dd30c74126812172bd = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_443360f744af61e83fe8adb425a8b14b = $(`<div id="html_443360f744af61e83fe8adb425a8b14b" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>CU 내방역점</b>         </div>         </div>`)[0];
+                popup_60451483845888dd30c74126812172bd.setContent(html_443360f744af61e83fe8adb425a8b14b);
+            
+        
+
+        marker_ac703904a95649d13195f87444fa5dd0.bindPopup(popup_60451483845888dd30c74126812172bd)
+        .openPopup();
+
+        
+    
+    
+        var popup_69749cd6d3ace93ac8888d33bb5bd21c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8f3af74bd6db05297495251a90235e5 = $(`<div id="html_a8f3af74bd6db05297495251a90235e5" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>CU 내방역점</b><br>             935-3 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_69749cd6d3ace93ac8888d33bb5bd21c.setContent(html_a8f3af74bd6db05297495251a90235e5);
+            
+        
+
+        marker_ac703904a95649d13195f87444fa5dd0.bindPopup(popup_69749cd6d3ace93ac8888d33bb5bd21c)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_ac703904a95649d13195f87444fa5dd0);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_ac703904a95649d13195f87444fa5dd0.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>CU 내방역점</b><br>
+            935-3 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_ac703904a95649d13195f87444fa5dd0.on('click', newMarker);
+            
+    
+            var marker_20258ca64ab9e80a782c8d40b3cc420f = L.marker(
+                [37.4909886, 126.9840544],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_41501f987123f51031b0c293d93653ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_20258ca64ab9e80a782c8d40b3cc420f.setIcon(icon_41501f987123f51031b0c293d93653ba);
+        
+    
+        var popup_52b546826ab9f356c4a6665803237151 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_31bc09ddb4093ef9f5306f19d86a0ca3 = $(`<div id="html_31bc09ddb4093ef9f5306f19d86a0ca3" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>미니스톱방배홈타운점</b>         </div>         </div>`)[0];
+                popup_52b546826ab9f356c4a6665803237151.setContent(html_31bc09ddb4093ef9f5306f19d86a0ca3);
+            
+        
+
+        marker_20258ca64ab9e80a782c8d40b3cc420f.bindPopup(popup_52b546826ab9f356c4a6665803237151)
+        .openPopup();
+
+        
+    
+    
+        var popup_6f386b3b48ab0a11cdc00c9ecabfd775 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2c393664940c826da6859732c6e28e3 = $(`<div id="html_a2c393664940c826da6859732c6e28e3" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>미니스톱방배홈타운점</b><br>             2133 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_6f386b3b48ab0a11cdc00c9ecabfd775.setContent(html_a2c393664940c826da6859732c6e28e3);
+            
+        
+
+        marker_20258ca64ab9e80a782c8d40b3cc420f.bindPopup(popup_6f386b3b48ab0a11cdc00c9ecabfd775)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_20258ca64ab9e80a782c8d40b3cc420f);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_20258ca64ab9e80a782c8d40b3cc420f.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>미니스톱방배홈타운점</b><br>
+            2133 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_20258ca64ab9e80a782c8d40b3cc420f.on('click', newMarker);
+            
+    
+            var marker_564817760891a0504e05fca8f8d9a498 = L.marker(
+                [37.487406, 126.983499],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_1a497b737dd9511f7c4fb5ff3887888f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_564817760891a0504e05fca8f8d9a498.setIcon(icon_1a497b737dd9511f7c4fb5ff3887888f);
+        
+    
+        var popup_c2fafd52f7a1c22d64be9cbc93bcbad7 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_ba1ed812d370a2ebe20d6ac870c168aa = $(`<div id="html_ba1ed812d370a2ebe20d6ac870c168aa" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>CU 방배이수역점</b>         </div>         </div>`)[0];
+                popup_c2fafd52f7a1c22d64be9cbc93bcbad7.setContent(html_ba1ed812d370a2ebe20d6ac870c168aa);
+            
+        
+
+        marker_564817760891a0504e05fca8f8d9a498.bindPopup(popup_c2fafd52f7a1c22d64be9cbc93bcbad7)
+        .openPopup();
+
+        
+    
+    
+        var popup_b0502badb0419f5e4e306f199317666e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0a2bca0e1c4419725aa235f2150e7f6 = $(`<div id="html_b0a2bca0e1c4419725aa235f2150e7f6" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>CU 방배이수역점</b><br>             26 Donggwang-ro 12ga-gil, Seocho District         </div>         </div>`)[0];
+                popup_b0502badb0419f5e4e306f199317666e.setContent(html_b0a2bca0e1c4419725aa235f2150e7f6);
+            
+        
+
+        marker_564817760891a0504e05fca8f8d9a498.bindPopup(popup_b0502badb0419f5e4e306f199317666e)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_564817760891a0504e05fca8f8d9a498);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_564817760891a0504e05fca8f8d9a498.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>CU 방배이수역점</b><br>
+            26 Donggwang-ro 12ga-gil, Seocho District
+        </div>
+        `);
+                    };
+                marker_564817760891a0504e05fca8f8d9a498.on('click', newMarker);
+            
+    
+            var marker_e67ab38eb9d4f1a4125ee3b5f83928bf = L.marker(
+                [37.4894688, 126.9815382],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_382b504a6eb95e8b26df149ad82217d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e67ab38eb9d4f1a4125ee3b5f83928bf.setIcon(icon_382b504a6eb95e8b26df149ad82217d2);
+        
+    
+        var popup_a8b1f6f5d28579bcc6252fb1006bf0f9 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_b68e437fe7b558f64d42be4d688a23c7 = $(`<div id="html_b68e437fe7b558f64d42be4d688a23c7" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>세븐일레븐 이수남성점</b>         </div>         </div>`)[0];
+                popup_a8b1f6f5d28579bcc6252fb1006bf0f9.setContent(html_b68e437fe7b558f64d42be4d688a23c7);
+            
+        
+
+        marker_e67ab38eb9d4f1a4125ee3b5f83928bf.bindPopup(popup_a8b1f6f5d28579bcc6252fb1006bf0f9)
+        .openPopup();
+
+        
+    
+    
+        var popup_7d969049b1b6346e2b5fdced1e780932 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c008810a1dd707f9b079c8ec12c5e6c2 = $(`<div id="html_c008810a1dd707f9b079c8ec12c5e6c2" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>세븐일레븐 이수남성점</b><br>             33 Dongjak-daero 29ga-gil, Dongjak District         </div>         </div>`)[0];
+                popup_7d969049b1b6346e2b5fdced1e780932.setContent(html_c008810a1dd707f9b079c8ec12c5e6c2);
+            
+        
+
+        marker_e67ab38eb9d4f1a4125ee3b5f83928bf.bindPopup(popup_7d969049b1b6346e2b5fdced1e780932)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_e67ab38eb9d4f1a4125ee3b5f83928bf);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_e67ab38eb9d4f1a4125ee3b5f83928bf.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>세븐일레븐 이수남성점</b><br>
+            33 Dongjak-daero 29ga-gil, Dongjak District
+        </div>
+        `);
+                    };
+                marker_e67ab38eb9d4f1a4125ee3b5f83928bf.on('click', newMarker);
+            
+    
+            var marker_da3542fb812c0601413210956e75573c = L.marker(
+                [37.4881, 126.981527],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_886aace276b5349bef8b8d6531351a30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_da3542fb812c0601413210956e75573c.setIcon(icon_886aace276b5349bef8b8d6531351a30);
+        
+    
+        var popup_0bb155de185be5f41610035d65d5bfe5 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_88b3de90412f3111f8dc958c86a6b32f = $(`<div id="html_88b3de90412f3111f8dc958c86a6b32f" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 사당이수역점</b>         </div>         </div>`)[0];
+                popup_0bb155de185be5f41610035d65d5bfe5.setContent(html_88b3de90412f3111f8dc958c86a6b32f);
+            
+        
+
+        marker_da3542fb812c0601413210956e75573c.bindPopup(popup_0bb155de185be5f41610035d65d5bfe5)
+        .openPopup();
+
+        
+    
+    
+        var popup_8053ad138dfdf5bc61cfe57e9d99c135 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe19575c7903429434c64770dafd3eb1 = $(`<div id="html_fe19575c7903429434c64770dafd3eb1" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 사당이수역점</b><br>             88-3 Sadang-dong, Dongjak District         </div>         </div>`)[0];
+                popup_8053ad138dfdf5bc61cfe57e9d99c135.setContent(html_fe19575c7903429434c64770dafd3eb1);
+            
+        
+
+        marker_da3542fb812c0601413210956e75573c.bindPopup(popup_8053ad138dfdf5bc61cfe57e9d99c135)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_da3542fb812c0601413210956e75573c);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_da3542fb812c0601413210956e75573c.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 사당이수역점</b><br>
+            88-3 Sadang-dong, Dongjak District
+        </div>
+        `);
+                    };
+                marker_da3542fb812c0601413210956e75573c.on('click', newMarker);
+            
+    
+            var marker_1191753b86c2932442c3ebc5e8886feb = L.marker(
+                [37.4849508, 126.980963],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_ae5092a32ecc45accc566804a954c42e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1191753b86c2932442c3ebc5e8886feb.setIcon(icon_ae5092a32ecc45accc566804a954c42e);
+        
+    
+        var popup_236317f4dfdb0f4384de60fb785381af = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_3ddd723f99066e6f93c3e49f25440b35 = $(`<div id="html_3ddd723f99066e6f93c3e49f25440b35" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 시이수역점</b>         </div>         </div>`)[0];
+                popup_236317f4dfdb0f4384de60fb785381af.setContent(html_3ddd723f99066e6f93c3e49f25440b35);
+            
+        
+
+        marker_1191753b86c2932442c3ebc5e8886feb.bindPopup(popup_236317f4dfdb0f4384de60fb785381af)
+        .openPopup();
+
+        
+    
+    
+        var popup_da517a8b7f8b835e49962c2738a02bf8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8e4a91a5949492a8888b2e15cab6f64 = $(`<div id="html_a8e4a91a5949492a8888b2e15cab6f64" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 시이수역점</b><br>             144-4 Sadang-dong, Dongjak District         </div>         </div>`)[0];
+                popup_da517a8b7f8b835e49962c2738a02bf8.setContent(html_a8e4a91a5949492a8888b2e15cab6f64);
+            
+        
+
+        marker_1191753b86c2932442c3ebc5e8886feb.bindPopup(popup_da517a8b7f8b835e49962c2738a02bf8)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_1191753b86c2932442c3ebc5e8886feb);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_1191753b86c2932442c3ebc5e8886feb.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 시이수역점</b><br>
+            144-4 Sadang-dong, Dongjak District
+        </div>
+        `);
+                    };
+                marker_1191753b86c2932442c3ebc5e8886feb.on('click', newMarker);
+            
+    
+            var marker_a1883ff00f14c464ed218aa0ce97a4a9 = L.marker(
+                [37.49337729999999, 126.9888872],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_e87cb0b99a0804f4befb4f4921d64d60 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a1883ff00f14c464ed218aa0ce97a4a9.setIcon(icon_e87cb0b99a0804f4befb4f4921d64d60);
+        
+    
+        var popup_ff7d4db9a0e624c716554b9b8883ace9 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_dceb0be91b0c3a4ca24f0fb5db692316 = $(`<div id="html_dceb0be91b0c3a4ca24f0fb5db692316" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>7-Eleven</b>         </div>         </div>`)[0];
+                popup_ff7d4db9a0e624c716554b9b8883ace9.setContent(html_dceb0be91b0c3a4ca24f0fb5db692316);
+            
+        
+
+        marker_a1883ff00f14c464ed218aa0ce97a4a9.bindPopup(popup_ff7d4db9a0e624c716554b9b8883ace9)
+        .openPopup();
+
+        
+    
+    
+        var popup_4badeadf765d446b2f6b81f26d801030 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5d63f1b1aeeca994c71f08843fef372 = $(`<div id="html_e5d63f1b1aeeca994c71f08843fef372" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>7-Eleven</b><br>             794-19 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_4badeadf765d446b2f6b81f26d801030.setContent(html_e5d63f1b1aeeca994c71f08843fef372);
+            
+        
+
+        marker_a1883ff00f14c464ed218aa0ce97a4a9.bindPopup(popup_4badeadf765d446b2f6b81f26d801030)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_a1883ff00f14c464ed218aa0ce97a4a9);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_a1883ff00f14c464ed218aa0ce97a4a9.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>7-Eleven</b><br>
+            794-19 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_a1883ff00f14c464ed218aa0ce97a4a9.on('click', newMarker);
+            
+    
+            var marker_6867d54de062a582a0775569f43e1dd6 = L.marker(
+                [37.4834062, 126.9866933],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_2ee26deb6edbdc1beff2c54c34b3313b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6867d54de062a582a0775569f43e1dd6.setIcon(icon_2ee26deb6edbdc1beff2c54c34b3313b);
+        
+    
+        var popup_9110d4b16917dd5de35139031becd9a5 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_1b657cd96fe775a77beb7c3e36fe88a7 = $(`<div id="html_1b657cd96fe775a77beb7c3e36fe88a7" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>세븐일레븐 방배17호점</b>         </div>         </div>`)[0];
+                popup_9110d4b16917dd5de35139031becd9a5.setContent(html_1b657cd96fe775a77beb7c3e36fe88a7);
+            
+        
+
+        marker_6867d54de062a582a0775569f43e1dd6.bindPopup(popup_9110d4b16917dd5de35139031becd9a5)
+        .openPopup();
+
+        
+    
+    
+        var popup_e65179e3f697ad91e12d862a8c3d8c51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_836e39f8c7aa271e6067dfd1dcf0431d = $(`<div id="html_836e39f8c7aa271e6067dfd1dcf0431d" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>세븐일레븐 방배17호점</b><br>             957-3 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_e65179e3f697ad91e12d862a8c3d8c51.setContent(html_836e39f8c7aa271e6067dfd1dcf0431d);
+            
+        
+
+        marker_6867d54de062a582a0775569f43e1dd6.bindPopup(popup_e65179e3f697ad91e12d862a8c3d8c51)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_6867d54de062a582a0775569f43e1dd6);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_6867d54de062a582a0775569f43e1dd6.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>세븐일레븐 방배17호점</b><br>
+            957-3 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_6867d54de062a582a0775569f43e1dd6.on('click', newMarker);
+            
+    
+            var marker_326146dad9f378fa908a608efd0bbcfb = L.marker(
+                [37.49051599999999, 126.976194],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_0edb96997af7d31e3b8b0949d885edd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_326146dad9f378fa908a608efd0bbcfb.setIcon(icon_0edb96997af7d31e3b8b0949d885edd1);
+        
+    
+        var popup_d63d25701eaeddcdeabd2072aa9ec426 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_451d8406b1cfaab6077de1fa1cdf534b = $(`<div id="html_451d8406b1cfaab6077de1fa1cdf534b" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>CU 사당주영점</b>         </div>         </div>`)[0];
+                popup_d63d25701eaeddcdeabd2072aa9ec426.setContent(html_451d8406b1cfaab6077de1fa1cdf534b);
+            
+        
+
+        marker_326146dad9f378fa908a608efd0bbcfb.bindPopup(popup_d63d25701eaeddcdeabd2072aa9ec426)
+        .openPopup();
+
+        
+    
+    
+        var popup_8af2740c959d7b6099463fad1aa4f71b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9c481febd64161d6194e9a31c585a9c = $(`<div id="html_b9c481febd64161d6194e9a31c585a9c" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>CU 사당주영점</b><br>             이미지, 127 Dongjak-daero 29-gil, Dongjak District         </div>         </div>`)[0];
+                popup_8af2740c959d7b6099463fad1aa4f71b.setContent(html_b9c481febd64161d6194e9a31c585a9c);
+            
+        
+
+        marker_326146dad9f378fa908a608efd0bbcfb.bindPopup(popup_8af2740c959d7b6099463fad1aa4f71b)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_326146dad9f378fa908a608efd0bbcfb);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_326146dad9f378fa908a608efd0bbcfb.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>CU 사당주영점</b><br>
+            이미지, 127 Dongjak-daero 29-gil, Dongjak District
+        </div>
+        `);
+                    };
+                marker_326146dad9f378fa908a608efd0bbcfb.on('click', newMarker);
+            
+    
+            var marker_a949146d9b94a5e52eed9a6e6e0bf936 = L.marker(
+                [37.4932385, 126.9921369],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_61331b135ad954b5eb3c12a6aeacfc20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a949146d9b94a5e52eed9a6e6e0bf936.setIcon(icon_61331b135ad954b5eb3c12a6aeacfc20);
+        
+    
+        var popup_315048733cc57d4db66f0e2127d4846d = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_f2f70cff8b8919e6ba638b6dc4f026fd = $(`<div id="html_f2f70cff8b8919e6ba638b6dc4f026fd" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 방배서래점</b>         </div>         </div>`)[0];
+                popup_315048733cc57d4db66f0e2127d4846d.setContent(html_f2f70cff8b8919e6ba638b6dc4f026fd);
+            
+        
+
+        marker_a949146d9b94a5e52eed9a6e6e0bf936.bindPopup(popup_315048733cc57d4db66f0e2127d4846d)
+        .openPopup();
+
+        
+    
+    
+        var popup_fd215bfce91ca5eec4fb3765fbceb373 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc6b6ae55c26af063d87cd1b498484bd = $(`<div id="html_cc6b6ae55c26af063d87cd1b498484bd" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 방배서래점</b><br>             807-2 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_fd215bfce91ca5eec4fb3765fbceb373.setContent(html_cc6b6ae55c26af063d87cd1b498484bd);
+            
+        
+
+        marker_a949146d9b94a5e52eed9a6e6e0bf936.bindPopup(popup_fd215bfce91ca5eec4fb3765fbceb373)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_a949146d9b94a5e52eed9a6e6e0bf936);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_a949146d9b94a5e52eed9a6e6e0bf936.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 방배서래점</b><br>
+            807-2 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_a949146d9b94a5e52eed9a6e6e0bf936.on('click', newMarker);
+            
+    
+            var marker_80c3ccf47568dee7b3b1a2ce67e78696 = L.marker(
+                [37.48282289999999, 126.980805],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_9938c89db75ecd498ff3db28fc1ff021 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_80c3ccf47568dee7b3b1a2ce67e78696.setIcon(icon_9938c89db75ecd498ff3db28fc1ff021);
+        
+    
+        var popup_db5f4a7f8d8072a0132361645665452a = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_61ee20e569368387ac999a5b47b21d7b = $(`<div id="html_61ee20e569368387ac999a5b47b21d7b" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 사당남사점</b>         </div>         </div>`)[0];
+                popup_db5f4a7f8d8072a0132361645665452a.setContent(html_61ee20e569368387ac999a5b47b21d7b);
+            
+        
+
+        marker_80c3ccf47568dee7b3b1a2ce67e78696.bindPopup(popup_db5f4a7f8d8072a0132361645665452a)
+        .openPopup();
+
+        
+    
+    
+        var popup_4064356b3f866bb51208ebee4117eacb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b5271376ed1d6ecefb1ed38556dbb8eb = $(`<div id="html_b5271376ed1d6ecefb1ed38556dbb8eb" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>GS25 사당남사점</b><br>             1005-54 Sadang-dong, Dongjak District         </div>         </div>`)[0];
+                popup_4064356b3f866bb51208ebee4117eacb.setContent(html_b5271376ed1d6ecefb1ed38556dbb8eb);
+            
+        
+
+        marker_80c3ccf47568dee7b3b1a2ce67e78696.bindPopup(popup_4064356b3f866bb51208ebee4117eacb)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_80c3ccf47568dee7b3b1a2ce67e78696);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_80c3ccf47568dee7b3b1a2ce67e78696.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>GS25 사당남사점</b><br>
+            1005-54 Sadang-dong, Dongjak District
+        </div>
+        `);
+                    };
+                marker_80c3ccf47568dee7b3b1a2ce67e78696.on('click', newMarker);
+            
+    
+            var marker_07c506a7b309020fa5830d1b6039b6ad = L.marker(
+                [37.488989, 126.9935535],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_41817083fe562e5088a3a00ec90d8ea6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_07c506a7b309020fa5830d1b6039b6ad.setIcon(icon_41817083fe562e5088a3a00ec90d8ea6);
+        
+    
+        var popup_7e9c92161ac3ff3c7a40aa0341614c1c = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_01a664cf9b0b6c214c6f9577371f98f3 = $(`<div id="html_01a664cf9b0b6c214c6f9577371f98f3" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>세븐일레븐 방배6호점</b>         </div>         </div>`)[0];
+                popup_7e9c92161ac3ff3c7a40aa0341614c1c.setContent(html_01a664cf9b0b6c214c6f9577371f98f3);
+            
+        
+
+        marker_07c506a7b309020fa5830d1b6039b6ad.bindPopup(popup_7e9c92161ac3ff3c7a40aa0341614c1c)
+        .openPopup();
+
+        
+    
+    
+        var popup_a87efc4e0bb6e4e12fd2ebc656581e25 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1f73281374b978f208ac51cacede6f3 = $(`<div id="html_b1f73281374b978f208ac51cacede6f3" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>세븐일레븐 방배6호점</b><br>             875-21 방배4동, Seocho District         </div>         </div>`)[0];
+                popup_a87efc4e0bb6e4e12fd2ebc656581e25.setContent(html_b1f73281374b978f208ac51cacede6f3);
+            
+        
+
+        marker_07c506a7b309020fa5830d1b6039b6ad.bindPopup(popup_a87efc4e0bb6e4e12fd2ebc656581e25)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_07c506a7b309020fa5830d1b6039b6ad);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_07c506a7b309020fa5830d1b6039b6ad.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>세븐일레븐 방배6호점</b><br>
+            875-21 방배4동, Seocho District
+        </div>
+        `);
+                    };
+                marker_07c506a7b309020fa5830d1b6039b6ad.on('click', newMarker);
+            
+    
+            var marker_237a09f09f865df7c80bff7574ad193e = L.marker(
+                [37.4978211, 126.9859151],
+                {}
+            ).addTo(map_8ce721a303671c603bc4537a0f341da1);
+        
+    
+            var icon_ee1bb21fbdf944b3353f99bd79d74102 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_237a09f09f865df7c80bff7574ad193e.setIcon(icon_ee1bb21fbdf944b3353f99bd79d74102);
+        
+    
+        var popup_af048260e573e2f17c5c31393dc728d0 = L.popup({"autoClose": false, "maxWidth": "100%"});
+
+        
+            
+                var html_efd5dbc91b484275d0b0789d013072dc = $(`<div id="html_efd5dbc91b484275d0b0789d013072dc" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>7-Eleven</b>         </div>         </div>`)[0];
+                popup_af048260e573e2f17c5c31393dc728d0.setContent(html_efd5dbc91b484275d0b0789d013072dc);
+            
+        
+
+        marker_237a09f09f865df7c80bff7574ad193e.bindPopup(popup_af048260e573e2f17c5c31393dc728d0)
+        .openPopup();
+
+        
+    
+    
+        var popup_4edcf60209c52635f75ec2690448054a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d50b4011476115472f8215fc658723e6 = $(`<div id="html_d50b4011476115472f8215fc658723e6" style="width: 100.0%; height: 100.0%;">         <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">             <b>7-Eleven</b><br>             751-7 Bangbae-dong, Seocho District         </div>         </div>`)[0];
+                popup_4edcf60209c52635f75ec2690448054a.setContent(html_d50b4011476115472f8215fc658723e6);
+            
+        
+
+        marker_237a09f09f865df7c80bff7574ad193e.bindPopup(popup_4edcf60209c52635f75ec2690448054a)
+        ;
+
+        
+    
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(marker_237a09f09f865df7c80bff7574ad193e);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ marker_237a09f09f865df7c80bff7574ad193e.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup(`
+        <div style="white-space: nowrap; font-size: 10px; line-height: 0.5;">
+            <b>7-Eleven</b><br>
+            751-7 Bangbae-dong, Seocho District
+        </div>
+        `);
+                    };
+                marker_237a09f09f865df7c80bff7574ad193e.on('click', newMarker);
+            
+</script>
+</html>
