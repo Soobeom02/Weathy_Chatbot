@@ -1,6 +1,6 @@
 ## Project Summary
 
-<pdf_poster_final_presentation>
+[Download Poster PDF](image/pdf_poster_final_presentation.pdf)
 
 When people want to check the weather, they often have to rely on separate features and apps, such as search engines, widgets, or news apps, depending on the amount and quality of information they need. To address this inconvenience, we have developed a platform centered around **a chatbot function**, incorporating additional features like weather widgets and news. This allows users to check the weather forecast for today and the next five days, all in one place.
 
@@ -12,7 +12,7 @@ We did not use pre-trained models or the Chat GPT API; instead, **we developed m
 
 ### Basic App Structure
 
-<image_app_structure>
+![App Structure](image/image_app_structure.png)
 
 **Chat Tab**
 
@@ -44,9 +44,11 @@ Example: "Should I turn on the air conditioner tomorrow?" → "The temperature t
 
 ## System Pipeline
 
-<image_pipeline>
+![System Pipeline](image/image_pipeline.png)
 
-<image_data1> <image_data2> <image_data3>
+![Data Example 1](image/image_data1.png)
+![Data Example 2](image/image_data2.png)
+![Data Example 3](image/image_data3.png)
 
 We used three different datasets.
 
@@ -66,7 +68,9 @@ Afterwards, we proceeded with preprocessing and labeling the data.
 
 We found that pre-trained models like BERT, which already contain some weather-related data, did not categorize weather as we intended. Therefore, we removed all weather-related conversations from the everyday data and moved forward. The model needed to generate a first response by recognizing the labeled data described below.
 
-<image_template1> <image_template2> <image_template3>
+![Template Example 1](image/image_template1.png)
+![Template Example 2](image/image_template2.png)
+![Template Example 3](image/image_template3.png)
 
 We then labeled the data to create response structures using templates. We categorized the data into three main types: time, weather keywords, and impact.
 
@@ -98,7 +102,7 @@ Example:
 
 ## Modeling
 
-<image_model>
+![Model Diagram](image/image_model.png)
 
 **Early Models of LLMs like GPT and BERT**
 
